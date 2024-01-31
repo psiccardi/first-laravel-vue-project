@@ -228,3 +228,19 @@ export function getRolesAPI(data, success, error, signal) {
 export function getAdminPostsAPI(data, success, error, signal) {
     jsonGetAPI('/api/admin/posts', data, success, error, signal);
 }
+
+export function getOperatorPostsAPI(data, success, error, signal) {
+    jsonGetAPI('/api/operator/posts', data, success, error, signal);
+}
+
+export function createPostAPI(data, success, error, signal) {
+    jsonPostAPI('/api/post', data, success, error, signal);
+}
+
+export function editPostAPI(data, success, error, signal) {
+    jsonPutAPI('/api/post', data, success, error, signal);
+}
+
+export function deletePostAPI(data, success, error, signal) {
+    jsonDeleteAPI('/api/post', data, success, error, signal);
+}

@@ -10,6 +10,7 @@
     "password": "Password",
     "confirm_password": "Confirm password",
     "fill_password": "Insert password",
+    "fill_all_fields": "Fill all fields",
     "edit": "Edit",
     "edit_password": "Edit password",
     "old_password": "Current password",
@@ -18,9 +19,12 @@
     "edit_user": "Edit user",
     "delete_user": "Delete user",
     "create_post": "Create post",
+    "edit_post": "Edit post",
+    "delete_post": "Delete post",
     "cancel": "Cancel",
     "role": "Role",
     "title": "Title",
+    "content": "Content",
     "backoffice": {
         "profile": "Profile",
         "users": "Users",
@@ -60,9 +64,20 @@
                 "description": "Choose role",
                 "valid_feedback": "",
                 "invalid_feedback": ""
+            },
+            "title": {
+                "description": "Insert title",
+                "valid_feedback": "",
+                "invalid_feedback": ""
+            },
+            "content": {
+                "description": "Insert content",
+                "valid_feedback": "",
+                "invalid_feedback": ""
             }
         },
         "delete_user_confirm_question": "Are you sure you want to delete this user?",
+        "delete_post_confirm_question": "Are you sure you want to delete this post?",
         "edit_password_successful": "Password edited successfully",
         "edit_user_successful": "User edited successfully"
     }

@@ -40,6 +40,7 @@
         optionId.value = val;
         updateModel('update:modelValue', val);
         options.value = [];
+        autocompleteUl.value.style.display = 'none';
     }
     const setInputValue = (event) => {
         const value = event.target.value;

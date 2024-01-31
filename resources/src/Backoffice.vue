@@ -11,8 +11,9 @@
 </template>
 
 <script setup>
-import { ref, toRaw } from "vue";
+import { ref, toRaw} from "vue";
 import { useI18n } from "vue-i18n";
+import { useRoute } from "vue-router";
 import { getUserAPI } from "../js/utilities/api";
 import Utils from "../js/utilities/utils";
 // document.querySelector('content-wrapper').style.marginTop = offsetHeight + 'px';
@@ -20,18 +21,20 @@ import Navbar from "./components/backoffice/components/Navbar.vue";
 import Sidebar from "./components/backoffice/components/Sidebar.vue";
 const { t } = useI18n();
 const user = ref({});
-
+const route = useRoute();
+console.log(route.path);
 const updateUser = (newValue) => {
   user.value = newValue;
 };
 
-const refreshUser = (_user = null, emit, user, refs = {}) => {
+const refreshUser = (_user = null, emit, user, refs = {}, fn = null) => {
   if (_user) {
     user.value = _user;
     emit("update-user", _user);
     for (var prop in refs) {
       refs[prop].value = _user[prop];
     }
+    fn && fn();
     // if (typeof first_name_value !== 'undefined') {
     //     first_name_value.value = _user.first_name;
     // }
@@ -52,6 +55,7 @@ const refreshUser = (_user = null, emit, user, refs = {}) => {
       for (var prop in refs) {
         refs[prop].value = user.value[prop];
       }
+      fn && fn();
     },
     (err) => {
       Utils.DOM.toast(err.message, "error", t);

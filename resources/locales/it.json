@@ -10,6 +10,7 @@
     "password": "Password",
     "confirm_password": "Conferma password",
     "fill_password": "Inserisci password",
+    "fill_all_fields": "Compilare tutti i campi",
     "edit": "Modifica",
     "edit_password": "Modifica password",
     "old_password": "Password attuale",
@@ -17,10 +18,13 @@
     "create_user": "Crea utente",
     "delete_user": "Elimina utente",
     "create_post": "Crea post",
+    "edit_post": "Modifica post",
+    "delete_post": "Elimina post",
     "cancel": "Annulla",
     "role": "Ruolo",
     "logout": "Esci",
     "title": "Titolo",
+    "content": "Contenuto",
     "backoffice": {
         "profile": "Profilo",
         "users": "Utenti",
@@ -60,9 +64,20 @@
                 "description": "Seleziona il ruolo",
                 "valid_feedback": "",
                 "invalid_feedback": ""
+            },
+            "title": {
+                "description": "Scrivi il titolo",
+                "valid_feedback": "",
+                "invalid_feedback": ""
+            },
+            "content": {
+                "description": "Scrivi il contenuto",
+                "valid_feedback": "",
+                "invalid_feedback": ""
             }
         },
         "delete_user_confirm_question": "Sei sicuro di voler eliminare questo utente?",
+        "delete_post_confirm_question": "Sei sicuro di voler eliminare questo post?",
         "edit_password_successful": "Password modificata con successo!",
         "edit_user_successful": "Utente modificato con successo!"
     }

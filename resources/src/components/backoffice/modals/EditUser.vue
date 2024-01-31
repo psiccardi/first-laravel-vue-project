@@ -5,7 +5,6 @@
     @ok="props.ok"
     scrollable
     :title="props.title || t('edit_user')"
-    :lang="props.lang"
   >
     <b-form :id="(props.id || 'edit-user-modal') + 'user_data'">
       <form-group-input

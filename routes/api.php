@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RolesController;
@@ -37,6 +38,10 @@ Route::middleware(['customSanctumAuthentication', 'locale'])->group(function () 
     Route::put("/user", [UserController::class, "edit"]);
     Route::put("/user/password", [UserController::class, "editPassword"]);
     Route::get("/roles", [RolesController::class, "get"]);
+    Route::post("/post", [PostController::class, "create"]);
+    Route::put("/post", [PostController::class, "update"]);
+    Route::delete("/post", [PostController::class, "delete"]);
+    Route::get("/operator/posts", [PostsController::class, "getOperator"]);
 });
 
 Route::middleware('locale')->group(function () {

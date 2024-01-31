@@ -55,7 +55,7 @@ const updateMenu = () => {
             title: profileText.value,
         },
         {
-            href: '/backoffice/users',
+            href: '/backoffice/admin/users',
             title: usersText.value,
         },
         {
@@ -70,7 +70,7 @@ const updateMenu = () => {
             title: profileText.value,
         },
         {
-            href: '/backoffice/posts',
+            href: '/backoffice/operator/posts',
             title: postsText.value,
         },
     ]

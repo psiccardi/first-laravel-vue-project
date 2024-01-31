@@ -15,7 +15,7 @@ import './../css/backoffice.css';
 i18n.global.locale.value = 'en'
 const app = createApp(Backoffice)
 app
-    .use(router)
     .use(BootstrapVueNext)
     .use(i18n)
+    .use(router)
     .mount("#backoffice")
