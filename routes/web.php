@@ -17,12 +17,12 @@ use App\Http\Controllers\BackofficeController;
 */
 
 Route::middleware('redirectIfLogged')->get('/login', function () {
-    return view('login');
+    return view('index');
 })->name('login');
 
 Route::middleware('locale')->group(function () {
-    Route::post("/login", [AuthController::class, "loginWeb"]);
     Route::get("/", [HomeController::class, "getPage"]);
+    Route::post("/login", [AuthController::class, "loginWeb"]);
 });
 
 

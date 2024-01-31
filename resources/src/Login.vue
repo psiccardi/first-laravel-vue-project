@@ -1,4 +1,6 @@
 <script setup>
+    import './../css/login.css';
+
     import { ref } from 'vue';
     import Locale from './components/Locale.vue'
     import { setCookie } from './../js/utilities/cookies';

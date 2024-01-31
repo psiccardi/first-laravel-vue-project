@@ -9,6 +9,6 @@ class BackofficeController extends Controller
     //
     public function getPage(Request $request)
     {
-        return view('backoffice');
+        return view('index');
     }
 }

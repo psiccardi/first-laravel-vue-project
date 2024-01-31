@@ -8,7 +8,7 @@ import IconsResolve from 'unplugin-icons/resolver'
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+            input: ['resources/css/app.css', 'resources/css/backoffice.css', 'resources/css/login.css', 'resources/js/index.js'],
             refresh: true,
         }),
         vue(),

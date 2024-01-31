@@ -11,6 +11,7 @@
 </template>
 
 <script setup>
+import './../css/backoffice.css';
 import { ref, toRaw} from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";

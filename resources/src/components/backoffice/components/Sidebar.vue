@@ -1,25 +1,24 @@
 <template>
-  <div>
     <sidebar-menu
         :menu="menu"
         id="sidebar-left"
         title="Sidebar"
         shadow
-        v-bind:relative="true"
+        v-bind:relative="false"
+        :disable-hover="true"
     >
-    <template v-slot:footer>
-        <ul class="vsm--menu">
-            <li class="vsm--item">
-                <a :onclick="logout" class="vsm--link vsm--link_level-1" href="#">
-                    <div class="vsm--title logout-btn">
-                        {{ t('logout') }}
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </template>
+        <template v-slot:footer>
+            <ul class="vsm--menu">
+                <li class="vsm--item">
+                    <a :onclick="logout" class="vsm--link vsm--link_level-1" href="#">
+                        <div class="vsm--title logout-btn">
+                            {{ t('logout') }}
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </template>
     </sidebar-menu>
-  </div>
 </template>
 
 <script setup>
@@ -141,6 +140,11 @@ updateMenu();
 .vsm_collapsed .logout-btn {
     display: none;
 }
+
+#sidebar-left {
+    top: 40px !important;
+}
+
 /* #sidebar-right {
     position: static;
 } */
