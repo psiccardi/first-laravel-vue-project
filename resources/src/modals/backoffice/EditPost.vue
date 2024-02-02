@@ -36,10 +36,9 @@
     <script setup>
   import { onMounted, ref, watch, defineModel } from "vue";
   import { useI18n } from "vue-i18n";
-  import Utils from "../../../../js/utilities/utils.js";
   const { t, locale } = useI18n();
-  import FormGroupInput from "../../FormGroupInput.vue";
-  import FormGroupTextarea from "../../FormGroupTextarea.vue";
+  import FormGroupInput from "../../components/FormGroupInput.vue";
+  import FormGroupTextarea from "../../components/FormGroupTextarea.vue";
   const title_value = ref("");
   const content_value = ref("");
   const emit = defineEmits([

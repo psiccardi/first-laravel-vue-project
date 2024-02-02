@@ -47,12 +47,8 @@
   <script setup>
   import { ref, watch } from "vue";
   import { useI18n } from "vue-i18n";
-  import Utils from "./../../../../js/utilities/utils.js";
   const { t, locale } = useI18n();
-  import FormGroupInput from "../../../components/FormGroupInput.vue";
-  const first_name_value = ref("");
-  const last_name_value = ref("");
-  const email_value = ref("");
+  import FormGroupInput from "../../components/FormGroupInput.vue";
   const password = ref("");
   const confirm_password = ref("");
   const old_password = ref("");

@@ -62,11 +62,11 @@
   <script setup>
 import { onMounted, ref, watch, defineModel } from "vue";
 import { useI18n } from "vue-i18n";
-import Utils from "../../../../js/utilities/utils.js";
+import Utils from "../../../js/utilities/utils.js";
 const { t, locale } = useI18n();
-import FormGroupInput from "../../FormGroupInput.vue";
-import FormGroupSelect from "../../FormGroupSelect.vue";
-import { getRolesAPI } from "../../../../js/utilities/api.js";
+import FormGroupInput from "../../components/FormGroupInput.vue";
+import FormGroupSelect from "../../components/FormGroupSelect.vue";
+import { getRolesAPI } from "../../../js/utilities/api.js";
 const first_name_value = ref("");
 const last_name_value = ref("");
 const email_value = ref("");

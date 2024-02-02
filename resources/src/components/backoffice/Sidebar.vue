@@ -25,10 +25,10 @@
 import { ref, watch } from 'vue';
 import { SidebarMenu } from 'vue-sidebar-menu';
 import { useI18n } from 'vue-i18n';
-import { logoutWebAPI } from '../../../../js/utilities/api';
-import Utils from '../../../../js/utilities/utils';
+import { logoutWebAPI } from '../../../js/utilities/api';
+import Utils from '../../../js/utilities/utils';
 import { useRouter } from 'vue-router';
-import { setCookie } from '../../../../js/utilities/cookies';
+import { setCookie } from '../../../js/utilities/cookies';
 const { t, locale } = useI18n();
 const menu = ref([]);
 const profileText = ref(t('backoffice.profile'))

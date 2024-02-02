@@ -1,40 +1,70 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { getUserAPI } from "../js/utilities/api";
 
-import main from './Index.vue'
-import sectionBackoffice from './Backoffice.vue'
-import sectionLogin from './Login.vue';
-import pageProfile from './backoffice/pages/Profile.vue'
+/**
+ * First level components
+ */
+// Index (main component)
+import Index from './Index.vue'
 
-import pageUsers from './backoffice/pages/Users.vue'
-import pagePosts from './backoffice/pages/Posts.vue'
+// 404 page
+import NotFound from './NotFound.vue';
+
+/**
+ * Index sub-components
+ */
+//Backoffice (main backoffice component)
+import Backoffice from './pages/Backoffice.vue'
+
+//Blog
+import Blog from './pages/Blog.vue';
+
+//Login page
+import Login from './pages/Login.vue';
+
+/**
+ * Backoffice sub-components
+ */
+// Backoffice Profile page
+import BackofficeProfile from './pages/backoffice/Profile.vue'
+
+// Backoffice Users page (restricted to 'admin' role)
+import BackofficeAdminUsers from './pages/backoffice/admin/Users.vue'
+
+// Backoffice Posts page
+import BackofficePosts from './pages/backoffice/Posts.vue'
 import { ref, defineEmits } from "vue";
 import Utils from "./../js/utilities/utils.js";
 import { useI18n } from "vue-i18n";
 const routes = [
     {
         path: '/',
-        component: main,
+        component: Index,
         name: 'Index',
         children: [
             {
+                path: '',
+                component: Blog,
+                name: 'Blog'
+            },
+            {
                 path: 'login',
-                component: sectionLogin,
+                component: Login,
                 name: 'Login'
             },
             {
                 path: 'backoffice',
-                component: sectionBackoffice,
+                component: Backoffice,
                 name: 'Backoffice',
                 children: [
                     {
                         path: 'profile',
-                        component: pageProfile,
+                        component: BackofficeProfile,
                         name: 'Profile'
                     },
                     {
                         path: 'admin/users',
-                        component: pageUsers,
+                        component: BackofficeAdminUsers,
                         meta: {
                             role: ['administrator']
                         },
@@ -42,7 +72,7 @@ const routes = [
                     },
                     {
                         path: 'admin/posts',
-                        component: pagePosts,
+                        component: BackofficePosts,
                         meta: {
                             role: ['administrator']
                         },
@@ -50,13 +80,18 @@ const routes = [
                     },
                     {
                         path: 'operator/posts',
-                        component: pagePosts,
+                        component: BackofficePosts,
                         name: 'OperatorPosts'
                     },
                 ]
             }
         ]
     },
+    {
+        path: "/:catchAll(.*)",
+        component: NotFound,
+        name: 'NotFound'
+    }
     // {
     //     path: '/:pathMatch(.*)*',
     //     component: notFound

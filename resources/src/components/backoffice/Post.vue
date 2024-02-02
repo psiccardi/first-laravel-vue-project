@@ -10,8 +10,8 @@
         </div>
       </div>
       <div class="user-card-action">
-          <img class="pointer" @click="props.editClick" src="../../../../images/icon-actions-ic-edit.svg">
-          <img class="pointer" @click="props.deleteClick" src="../../../../images/icon-actions-ic-delete.svg">
+          <img class="pointer" @click="props.editClick" src="../../../images/icon-actions-ic-edit.svg">
+          <img class="pointer" @click="props.deleteClick" src="../../../images/icon-actions-ic-delete.svg">
       </div>
     </div>
 

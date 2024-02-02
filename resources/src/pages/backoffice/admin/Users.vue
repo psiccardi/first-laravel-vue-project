@@ -62,12 +62,12 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 import { ref, onMounted, watch, toRaw, reactive } from "vue";
-import GenericModal from "../../components/backoffice/modals/GenericModal.vue";
-import EditUser from "../../components/backoffice/modals/EditUser.vue";
-import ChangePassword from "../../components/backoffice/modals/ChangePassword.vue";
-import { createUserAPI, deleteUserAPI, editUserAPI, editUserPasswordAPI, getUsersAPI } from "../../../js/utilities/api";
-import Utils from "../../../js/utilities/utils";
-import User from "../../components/backoffice/components/User.vue";
+import GenericModal from "../../../modals/GenericModal.vue";
+import EditUser from "../../../modals/backoffice/EditUser.vue";
+import ChangePassword from "../../../modals/backoffice/ChangePassword.vue";
+import { createUserAPI, deleteUserAPI, editUserAPI, editUserPasswordAPI, getUsersAPI } from "../../../../js/utilities/api";
+import Utils from "../../../../js/utilities/utils";
+import User from "../../../components/backoffice/User.vue";
 import { useModal } from "bootstrap-vue-next";
 import * as db from 'lodash/debounce';
 const { t, locale } = useI18n();

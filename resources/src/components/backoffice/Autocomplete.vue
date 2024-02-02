@@ -10,7 +10,6 @@
 </template>
 <script setup>
     import { onMounted } from 'vue';
-    import Locale from '../../Locale.vue';
     import { defineProps, ref, defineEmits } from 'vue';
     const props = defineProps({
         id: String,

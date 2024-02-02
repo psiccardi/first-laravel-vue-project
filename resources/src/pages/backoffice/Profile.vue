@@ -51,12 +51,12 @@
 import { ref, watch, toRaw, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { useModal } from "bootstrap-vue-next";
-import ChangePassword from "../../components/backoffice/modals/ChangePassword.vue";
+import ChangePassword from "../../modals/backoffice/ChangePassword.vue";
 import {
   editUserAPI,
   editUserPasswordAPI,
-} from "./../../../js/utilities/api.js";
-import Utils from "./../../../js/utilities/utils.js";
+} from "../../../js/utilities/api.js";
+import Utils from "../../../js/utilities/utils.js";
 const { t, locale } = useI18n();
 const props = defineProps({
   refreshUser: Function,

@@ -1,13 +1,13 @@
 <script setup>
-    import './../css/login.css';
+    import './../../css/login.css';
 
     import { ref } from 'vue';
-    import Locale from './components/Locale.vue'
-    import { setCookie } from './../js/utilities/cookies';
+    import Locale from '../components/Locale.vue'
+    import { setCookie } from '../../js/utilities/cookies';
     import { useI18n } from 'vue-i18n';
-    import { jsonPostAPI, jsonGetAPI, getAPI, loginWebAPI } from '../js/utilities/api.js';
+    import { jsonPostAPI, jsonGetAPI, getAPI, loginWebAPI } from '../../js/utilities/api.js';
     const { t, locale } = useI18n();
-    import Utils from './../js/utilities/utils.js';
+    import Utils from '../../js/utilities/utils.js';
     const email = ref('');
     const password = ref('');
     const csrf = ref(document.querySelector('meta[name="csrf-token"]').getAttribute('content'))

@@ -36,3 +36,5 @@ Route::middleware(['locale', 'auth:sanctum'])->group(function () {
     Route::any('/backoffice/{all}', [BackofficeController::class, "getPage"])->where('all', '^(?!api).*$')->name('backoffice');
     Route::get("/logout", [AuthController::class, "logoutWeb"]);
 });
+
+Route::get("/{any}", [HomeController::class, "getPage"])->where("any", ".*");

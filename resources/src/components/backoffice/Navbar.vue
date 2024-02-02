@@ -5,7 +5,7 @@
     </b-navbar>
 </template>
 <script setup>
-    import Locale from '../../Locale.vue';
+    import Locale from '../Locale.vue';
 
 </script>
 <style scoped>

@@ -70,10 +70,10 @@ import {
   deletePostAPI
 } from "../../../js/utilities/api.js";
 import * as db from "lodash/debounce";
-import GenericModal from "../../components/backoffice/modals/GenericModal.vue";
-import Autocomplete from "../../components/backoffice/components/Autocomplete.vue";
-import EditPost from "../../components/backoffice/modals/EditPost.vue";
-import Post from "../../components/backoffice/components/Post.vue";
+import GenericModal from "../../modals/GenericModal.vue";
+import Autocomplete from "../../components/backoffice/Autocomplete.vue";
+import EditPost from "../../modals/backoffice/EditPost.vue";
+import Post from "../../components/backoffice/Post.vue";
 import Utils from "../../../js/utilities/utils.js";
 const { t, locale } = useI18n();
 const props = defineProps({

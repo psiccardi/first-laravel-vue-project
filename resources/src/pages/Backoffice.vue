@@ -11,15 +11,15 @@
 </template>
 
 <script setup>
-import './../css/backoffice.css';
+import './../../css/backoffice.css';
 import { ref, toRaw} from "vue";
 import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
-import { getUserAPI } from "../js/utilities/api";
-import Utils from "../js/utilities/utils";
+import { getUserAPI } from "../../js/utilities/api";
+import Utils from "../../js/utilities/utils";
 // document.querySelector('content-wrapper').style.marginTop = offsetHeight + 'px';
-import Navbar from "./components/backoffice/components/Navbar.vue";
-import Sidebar from "./components/backoffice/components/Sidebar.vue";
+import Navbar from "../components/backoffice/Navbar.vue";
+import Sidebar from "../components/backoffice/Sidebar.vue";
 const { t } = useI18n();
 const user = ref({});
 const route = useRoute();
